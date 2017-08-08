@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FifaAddict:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="FifaAddict.war">
+      <element id="artifact" artifact-name="FifaAddict:war exploded" />
+    </root>
+  </artifact>
+</component>

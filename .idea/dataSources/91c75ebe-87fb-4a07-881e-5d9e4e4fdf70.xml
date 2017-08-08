@@ -1,0 +1,23 @@
+<dataSource name="MySQL - fifa@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="fifa">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="arxiv" />
+    <schema id="3" name="arxiv2" />
+    <schema id="4" name="bookingroom" />
+    <schema id="5" name="city" />
+    <schema id="6" name="demo" />
+    <schema id="7" name="information_schema" />
+    <schema id="8" name="Media" />
+    <schema id="9" name="mycontact" />
+    <schema id="10" name="mydatabase" />
+    <schema id="11" name="mysql" />
+    <schema id="12" name="one2many" />
+    <schema id="13" name="performance_schema" />
+    <schema id="14" name="react" />
+    <schema id="15" name="smartstaff" />
+    <schema id="16" name="test" />
+    <schema id="17" name="thym" />
+  </database-model>
+</dataSource>
