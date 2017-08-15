@@ -4,71 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-    <bean id="UserService" parent="transactionProxyTemplate">
+    <bean id="PlayerService" parent="transactionProxyTemplate">
         <property name="target">
-            <bean class="com.framgia.service.impl.UserServiceImpl">
-                <property name="userDAO" ref="UserDAO"></property>
-                <property name="permissionDAO" ref="PermissionDAO"></property>
-                <property name="groupDAO" ref="GroupDAO"></property>
+            <bean class="com.mvs.service.impl.PlayerServiceImpl">
+                <property name="playerDAO" ref="PlayerDAO"></property>
             </bean>
         </property>
     </bean>
 
-    <bean id="GroupService" parent="transactionProxyTemplate">
-        <property name="target">
-            <bean class="com.framgia.service.impl.GroupServiceImpl">
-                <property name="groupDAO" ref="GroupDAO"></property>
-                <property name="userDAO" ref="UserDAO"></property>
-            </bean>
-        </property>
-    </bean>
 
-    <bean id="ManageUserService" parent="transactionProxyTemplate">
-        <property name="target">
-            <bean class="com.framgia.service.impl.ManageUserServiceImpl">
-                <property name="userDAO" ref="UserDAO"></property>
-                <property name="permissionDAO" ref="PermissionDAO"></property>
-                <property name="groupDAO" ref="GroupDAO"></property>
-            </bean>
-        </property>
-    </bean>
 
-    <bean id="ManageGroupService" parent="transactionProxyTemplate">
-        <property name="target">
-            <bean class="com.framgia.service.impl.ManageGroupServiceImpl">
-                <property name="userDAO" ref="UserDAO"></property>
-                <property name="permissionDAO" ref="PermissionDAO"></property>
-                <property name="groupDAO" ref="GroupDAO"></property>
-            </bean>
-        </property>
-    </bean>
 
-    <bean id="ImageService" parent="transactionProxyTemplate">
-        <property name="target">
-            <bean class="com.framgia.service.impl.ImageServiceImpl">
-                <property name="imageDAO" ref="ImageDAO"></property>
-                <property name="voteDAO" ref="VoteDAO"></property>
-            </bean>
-        </property>
-    </bean>
-
-    <bean id="FileUploadService" parent="transactionProxyTemplate">
-        <property name="target">
-            <bean class="com.framgia.service.impl.FileUploadServiceImpl">
-                <property name="imageDAO" ref="ImageDAO"></property>
-                <property name="userDAO" ref="UserDAO"></property>
-                <property name="groupDAO" ref="GroupDAO"></property>
-            </bean>
-        </property>
-    </bean>
-
-    <bean id="ManageImageService" parent="transactionProxyTemplate">
-        <property name="target">
-            <bean class="com.framgia.service.impl.ManageImageServiceImpl">
-                <property name="imageDAO" ref="ImageDAO"></property>
-                <property name="userDAO" ref="UserDAO"></property>
-                <property name="groupDAO" ref="GroupDAO"></property>
-            </bean>
-        </property>
-    </bean>
 </beans>
