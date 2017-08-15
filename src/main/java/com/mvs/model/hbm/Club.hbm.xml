@@ -9,12 +9,12 @@
         <id name="id" column="ID">
             <generator class="increment" />
         </id>
-        <property name="name" column="name" />
+        <property name="name" column="NAME"/>
 
 
 
         <list name="players" lazy="true" inverse="true">
-            <key column="IDIMAGE" not-null="true" />
+            <key column="IDCLUB" not-null="true"/>
             <list-index column="ID" />
             <one-to-many class="Player" />
         </list>

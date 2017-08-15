@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class Player implements Serializable{
 
-    private Long id;
+    private int id;
     private String name;
     private String avatar;
     private String situation;
@@ -17,7 +17,7 @@ public class Player implements Serializable{
 
     private Club club;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -29,7 +29,7 @@ public class Player implements Serializable{
         this.name = name;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
