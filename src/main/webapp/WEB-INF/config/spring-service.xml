@@ -8,11 +8,22 @@
         <property name="target">
             <bean class="com.mvs.service.impl.PlayerServiceImpl">
                 <property name="playerDAO" ref="PlayerDAO"></property>
+                <property name="clubDAO" ref="ClubDAO"></property>
+
             </bean>
         </property>
     </bean>
 
 
+    <bean id="ClubService" parent="transactionProxyTemplate">
+        <property name="target">
+            <bean class="com.mvs.service.impl.ClubServiceImpl">
+                <property name="playerDAO" ref="PlayerDAO"></property>
+                <property name="clubDAO" ref="ClubDAO"></property>
+
+            </bean>
+        </property>
+    </bean>
 
 
 </beans>

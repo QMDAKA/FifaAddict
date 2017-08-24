@@ -1,6 +1,7 @@
 package com.mvs.service;
 
 import com.mvs.bean.PlayerInfo;
+import com.mvs.model.Player;
 
 /**
  * Created by quangminh on 12/08/2017.

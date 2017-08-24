@@ -1,18 +1,19 @@
 package com.mvs.dao.impl;
 
-import com.mvs.dao.GenericDAO;
-import com.mvs.dao.PlayerDAO;
-import com.mvs.model.Player;
-import org.hibernate.Query;
-import org.hibernate.SQLQuery;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.hibernate.SQLQuery;
+
+import com.mvs.dao.GenericDAO;
+import com.mvs.dao.PlayerDAO;
+import com.mvs.model.Player;
+
 /**
  * Created by quangminh on 14/08/2017.
  */
+@SuppressWarnings("serial")
 public class PlayerDAOImpl extends GenericDAO<Integer, Player> implements PlayerDAO {
     @Override
     public Player getPlayerById(int id) {

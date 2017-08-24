@@ -1,5 +1,7 @@
 package com.mvs.model;
 
+import com.mvs.bean.ClubInfo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,10 +11,30 @@ import java.util.List;
 public class Club {
     private int id;
     private String name;
+    private String image;
     private List<Player> players;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
     public Club() {
-        players=new ArrayList<Player>();
+        players = new ArrayList<Player>();
+    }
+
+
+    public Club(ClubInfo clubInfo) {
+        players = new ArrayList<>();
+        this.setId(clubInfo.getId());
+        this.setName(clubInfo.getName());
+        this.setImage(clubInfo.getImage());
+
+
     }
 
     public int getId() {
