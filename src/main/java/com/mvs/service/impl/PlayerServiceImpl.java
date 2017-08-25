@@ -29,6 +29,7 @@ public class PlayerServiceImpl extends BaseServiceImpl implements PlayerService 
         }
     }
 
+
     @Override
     public boolean addPlayer(Player player) {
         try {

@@ -22,6 +22,7 @@
         <property name="image" column="IMAGE" type="string"/>
 
 
+
     </class>
 
 </hibernate-mapping>
