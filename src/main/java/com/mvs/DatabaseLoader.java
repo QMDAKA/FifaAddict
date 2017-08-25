@@ -1,11 +1,9 @@
 package com.mvs;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import javax.transaction.Transactional;
-import java.util.ArrayList;
+
+import org.springframework.stereotype.Component;
 
 /**
  * Created by quangminh on 19/04/2017.

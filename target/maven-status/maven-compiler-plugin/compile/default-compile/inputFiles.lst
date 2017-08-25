@@ -15,7 +15,9 @@
 /home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/service/impl/PlayerServiceImpl.java
 /home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/service/ClubService.java
 /home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/dao/impl/ClubDAOImpl.java
+/home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/controller/ClubController.java
 /home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/dao/GenericDAO.java
 /home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/controller/PlayerController.java
 /home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/dao/IGenericDAO.java
 /home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/dao/impl/PlayerDAOImpl.java
+/home/quangminh/IdeaProjects/FifaAddict/src/main/java/com/mvs/config/DataSeedingListener.java

@@ -1,0 +1,96 @@
+-- MySQL dump 10.13  Distrib 5.6.33, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: fifa
+-- ------------------------------------------------------
+-- Server version	5.6.33-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Club`
+--
+
+DROP TABLE IF EXISTS `Club`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Club` (
+  `ID` int(11) NOT NULL DEFAULT '0',
+  `NAME` varchar(255) DEFAULT NULL,
+  `IMAGE` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Club`
+--
+
+LOCK TABLES `Club` WRITE;
+/*!40000 ALTER TABLE `Club` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Club` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Player`
+--
+
+DROP TABLE IF EXISTS `Player`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Player` (
+  `ID` int(11) NOT NULL DEFAULT '0',
+  `IDCLUB` int(11) DEFAULT NULL,
+  `NAME` varchar(255) DEFAULT NULL,
+  `AVATAR` varchar(255) DEFAULT NULL,
+  `SITUATION` varchar(255) DEFAULT NULL,
+  `NATION` varchar(255) DEFAULT NULL,
+  `SPEED` int(11) DEFAULT NULL,
+  `AGILITY` int(11) DEFAULT NULL,
+  `BALL_CONTROL` int(11) DEFAULT NULL,
+  `FINISHING` int(11) DEFAULT NULL,
+  `POSITIONING` int(11) DEFAULT NULL,
+  `LONG_SHOT` int(11) DEFAULT NULL,
+  `REACTION` int(11) DEFAULT NULL,
+  `SHOOT_POWER` int(11) DEFAULT NULL,
+  `VOLLEY` int(11) DEFAULT NULL,
+  `TACKLE` int(11) DEFAULT NULL,
+  `MARKING` int(11) DEFAULT NULL,
+  `STAMINA` int(11) DEFAULT NULL,
+  `BALANCE` int(11) DEFAULT NULL,
+  `GK` int(11) DEFAULT NULL,
+  `WEIGHT` varchar(255) DEFAULT NULL,
+  `HEIGHT` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `IDCLUB` (`IDCLUB`),
+  CONSTRAINT `Player_ibfk_1` FOREIGN KEY (`IDCLUB`) REFERENCES `Club` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Player`
+--
+
+LOCK TABLES `Player` WRITE;
+/*!40000 ALTER TABLE `Player` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Player` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-08-24 11:50:03

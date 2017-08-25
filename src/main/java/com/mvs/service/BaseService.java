@@ -1,5 +1,7 @@
 package com.mvs.service;
 
+import java.io.Serializable;
+
 import com.mvs.dao.ClubDAO;
 import com.mvs.dao.PlayerDAO;
 

@@ -8,6 +8,10 @@ import com.mvs.service.BaseService;
  * Created by quangminh on 15/08/2017.
  */
 public class BaseServiceImpl implements BaseService {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     protected PlayerDAO playerDAO;
     protected ClubDAO clubDAO;
 
