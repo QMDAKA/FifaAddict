@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.mvs.model">
+
+    <class name="Player" table="Player">
+        <id name="id" column="ID">
+            <generator class="increment" />
+        </id>
+        
+        <many-to-one name="club" class="Club" cascade="all">
+            <column name="IDCLUB"/>
+        </many-to-one>
+
+
+        <property name="agility" column="AGILITY" type="int"/>
+        <property name="ballControl" column="BALL_CONTROL" type="int"/>
+        <property name="finishing" column="FINISHING" type="int"/>
+        <property name="positioning" column="POSITIONING" type="int"/>
+        <property name="longShot" column="LONG_SHOT" type="int"/>
+        <property name="reaction" column="REACTION" type="int"/>
+        <property name="shootPower" column="SHOOT_POWER" type="int"/>
+        <property name="volley" column="VOLLEY" type="int"/>
+        <property name="tackle" column="TACKLE" type="int"/>
+        <property name="marking" column="MARKING" type="int"/>
+        <property name="stamina" column="STAMINA" type="int"/>
+        <property name="balance" column="BALANCE" type="int"/>
+        <property name="weight" column="WEIGHT" type="string"/>
+        <property name="height" column="HEIGHT" type="string"/>
+        <property name="gk" column="GK" type="int"/>
+        <property name="name" column="NAME" type="string"/>
+        <property name="avatar" column="AVATAR" type="string"/>
+        <property name="situation" column="SITUATION" type="string"/>
+        <property name="nation" column="NATION" type="string"/>
+        <property name="speed" column="SPEED" type="int"/>
+
+    </class>
+
+</hibernate-mapping>

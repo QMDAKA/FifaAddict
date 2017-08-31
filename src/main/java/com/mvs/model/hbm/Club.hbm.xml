@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.mvs.model">
+
+    <class name="Club" table="Club">
+        <id name="id" column="ID">
+            <generator class="increment" />
+        </id>
+
+
+        <list name="players" lazy="true" inverse="true">
+            <key column="IDCLUB"/>
+            <list-index column="ID" />
+            <one-to-many class="Player" />
+        </list>
+
+
+        <property name="name" column="NAME" type="string"/>
+        <property name="image" column="IMAGE" type="string"/>
+
+
+
+    </class>
+
+</hibernate-mapping>
