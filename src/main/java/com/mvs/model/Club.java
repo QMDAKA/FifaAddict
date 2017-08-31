@@ -14,13 +14,7 @@ public class Club {
     private String image;
     private List<Player> players;
 
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
 
 
     public Club() {
@@ -55,6 +49,13 @@ public class Club {
 
     public List<Player> getPlayers() {
         return players;
+    }
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setPlayers(List<Player> players) {

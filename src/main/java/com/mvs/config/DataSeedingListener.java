@@ -42,8 +42,11 @@ public class DataSeedingListener implements ApplicationListener<ContextRefreshed
                 //add  new player and new club
                 for (Element e : elements) {
                     String ptr = e.attr("abs:href");
-                    AddNewClubAndPlayer(ptr);
-
+                    try {
+                        AddNewClubAndPlayer(ptr);
+                    }catch (Exception e1){
+                        System.out.println(e1);
+                    }
 
                 }
 
@@ -102,7 +105,6 @@ public class DataSeedingListener implements ApplicationListener<ContextRefreshed
             player.setSituation(element.select("body > div.container.main > div:nth-child(3) > div.col-md-8 > div:nth-child(2) > div.col-lg-5.col-sm-6 > div > div.panel-body > p:nth-child(6) > span > a:nth-child(1) > span").html());
 
             club.getPlayers().add(player);
-
             player.setClub(club);
 
             playerService.addPlayer(player);
